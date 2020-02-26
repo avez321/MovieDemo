@@ -1,6 +1,6 @@
 package com.rtr.moviesdemo.model
 
-data class Movie(
+data class Result(
     val adult: Boolean ?= null,
     val backdrop_path: String ?= null,
     val genre_ids: List<Int> ?= null,
