@@ -9,16 +9,16 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 
 class RepositoryImp(private val movieApi: MovieApi, private val dispatcher: CoroutineDispatcher = Dispatchers.IO) : RepositoryInterface {
-    override suspend fun getUpcomingMovie(): ResultWrapper<MoviesResponse> {
+    override suspend fun getMovies(url:String): ResultWrapper<MoviesResponse> {
 
-        return safeApiCall(dispatcher) { movieApi.getUpcomingMovie(apiKey = Constants.apiKey) }
+        return safeApiCall(dispatcher) { movieApi.getUpcomingMovie(url, Constants.apiKey) }
     }
 
-    override suspend fun getNowPlayingMovies(): ResultWrapper<MoviesResponse> {
+   /* override suspend fun getNowPlayingMovies(): ResultWrapper<MoviesResponse> {
         return safeApiCall(dispatcher) {
             movieApi.getNowPlaying(apiKey = Constants.apiKey)
         }
-    }
+    }*/
 }
 
 

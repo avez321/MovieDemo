@@ -1,5 +1,10 @@
 package com.rtr.moviesdemo.model
 
+import android.os.Parcelable
+import com.rtr.moviesdemo.base.BaseModel
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
 data class Result(
     val adult: Boolean ?= null,
     val backdrop_path: String ?= null,
@@ -15,4 +20,4 @@ data class Result(
     val video: Boolean?= null,
     val vote_average: Double?= null,
     val vote_count: Int?= null
-)
+): BaseModel(), Parcelable

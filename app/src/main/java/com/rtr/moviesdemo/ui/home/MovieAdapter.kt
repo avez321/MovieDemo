@@ -17,6 +17,7 @@ class MovieAdapter : RecyclerView.Adapter<MovieAdapter.ContentViewHolder>() {
             parent,
             false
         )
+
         return ContentViewHolder(movieBinding)
     }
 
@@ -33,9 +34,8 @@ class MovieAdapter : RecyclerView.Adapter<MovieAdapter.ContentViewHolder>() {
         notifyDataSetChanged()
     }
 
-
     class ContentViewHolder(
-        private val binding: ItemMovieBinding
+        val binding: ItemMovieBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
 
