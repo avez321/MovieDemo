@@ -93,9 +93,12 @@ object BindingUtils {
      viewPager.postDelayed(runnable, 5000)
 
 
-     /*viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+     viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+         override fun onPageSelected(position: Int) {
+             //delayedScroll(viewPager, position + 1, moviesList)
 
-     })*/
+         }
+     })
 
 
  }
